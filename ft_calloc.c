@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vess <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: jcampagn <jcampagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:16:15 by vess              #+#    #+#             */
-/*   Updated: 2021/11/24 21:45:23 by vess             ###   ########.fr       */
+/*   Updated: 2022/10/29 18:26:42 by jcampagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*dest;
 
 	dest = 0;
+	if ((count * size) < count || (count * size) < size)
+		return (NULL);
 	dest = malloc(count * size);
 	if (!dest)
 		return (NULL);
